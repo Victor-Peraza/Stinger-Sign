@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
+import "./font.css";
 import { Redirect } from "react-router-dom";
 class Login extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Login extends Component {
     this.state = {
       islogged: false,
       loginParams: {
-        user_id: "",
+        user_email: "",
         user_password: ""
       }
     };
@@ -22,9 +23,9 @@ class Login extends Component {
   };
 
   login = event => {
-    let user_id = this.state.loginParams.user_id;
+    let user_email = this.state.loginParams.user_email;
     let user_password = this.state.loginParams.user_password;
-    if (user_id === "admin" && user_password === "123") {
+    if (user_email === "herky@csus.edu" && user_password === "123") {
       localStorage.setItem("token", "T");
       this.setState({
         islogged: true
@@ -45,7 +46,7 @@ class Login extends Component {
               <div class="textLabel">Email</div>
               <input
                 type="text"
-                name="user_id"
+                name="user_email"
                 required class="form-input"
                 onChange={this.handleFormChange}
                 placeholder="herky@csus.edu"
@@ -58,9 +59,14 @@ class Login extends Component {
                 onChange={this.handleFormChange}
                 placeholder="Enter Password"
               />
-              <input type="submit" class="form-submit" value="Login" />
-              <Link to={`/Register`}><input type="button" class="form-register" value="Sign Up"></input></Link>
+              <input type="submit" class="form-submit" value="Log In" />
         </form>
+        <h3><span>Or</span></h3>
+        <input type="button" class="form-register" value="Sign Up"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href='/Register.jsx';
+                }}></input>
         </div>
       </body>
     );

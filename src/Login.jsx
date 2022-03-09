@@ -8,7 +8,7 @@ class Login extends Component {
     this.state = {
       islogged: false,
       loginParams: {
-        user_id: "",
+        user_email: "",
         user_password: ""
       }
     };
@@ -23,9 +23,9 @@ class Login extends Component {
   };
 
   login = event => {
-    let user_id = this.state.loginParams.user_id;
+    let user_email = this.state.loginParams.user_email;
     let user_password = this.state.loginParams.user_password;
-    if (user_id === "admin" && user_password === "123") {
+    if (user_email === "herky@csus.edu" && user_password === "123") {
       localStorage.setItem("token", "T");
       this.setState({
         islogged: true
@@ -46,7 +46,7 @@ class Login extends Component {
               <div class="textLabel">Email</div>
               <input
                 type="text"
-                name="user_id"
+                name="user_email"
                 required class="form-input"
                 onChange={this.handleFormChange}
                 placeholder="herky@csus.edu"
