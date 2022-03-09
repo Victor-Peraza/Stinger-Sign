@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Stinger Sign</title>
+			<link rel="stylesheet" href="registration.css">
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin-ext" rel="stylesheet" type="text/css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        </head>
+	
+	<body><div class="logo"></div>
+		<div class="page-centered">
+            <h1 class="login-h1">Stinger Sign</h1>
+            <h2 class="login-h2">Create Account</h1>
+            <div class="page-registration">
+                <form method="post">
+                    <div class="textLabel">Email</div>
+                    <input type="email" id="email" type="email" required class="form-input">
+
+                    <div class="textLabel">Confirm Email</div>
+                    <input type="email" name="confirm_email" id="confirm_email" required class="form-input">
+                    <span id='emailMessage'></span>
+
+                    <div class="textLabel">Password</div>
+                    <input name="password" id="password" type="password" required class="form-input"/>
+
+                    <div class="textLabel">Confirm Password</div>
+                    <input type="password" name="confirm_password" id="confirm_password" required class="form-input"/>
+                    <span id='passMessage'></span>
+
+                    <div class="textLabel">First Name</div>
+                    <input type="text" required class="form-input">
+                    <div class="textLabel">Last Name</div>
+                    <input type="text" required class="form-input">
+
+                    <div class="textLabel">Job Title</div>
+                    <input type="text" required class="form-input">
+                    <center>
+                        <input type="submit" class="form-create" value="Create">
+                    </center>
+                </form>
+            </div>
+        </div>
+	</body>
+    <script>
+        $('#email, #confirm_email').on('keyup', function () {
+        if ($('#email').val() == $('#confirm_email').val()) {
+            $('#emailMessage').html('✓').css('color', 'green');
+        } else 
+            $('#emailMessage').html('Not Matching').css('color', 'red');
+        })
+
+        $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#passMessage').html('✓').css('color', 'green');
+        } else 
+            $('#passMessage').html('Not Matching').css('color', 'red');
+        });
+    </script>
+</html>

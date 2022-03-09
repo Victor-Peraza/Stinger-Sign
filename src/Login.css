@@ -1,0 +1,129 @@
+body{
+	font-family: "Roboto", sans-serif;
+  color: #474747;
+  background-color: #EDEDED;
+}
+
+input, textarea, button, button:focus {
+  outline: none;
+  box-shadow:none !important;
+}
+
+.page-full {
+  width: 100%;
+  overflow: hidden;
+  background-color:#ccc;
+  height: 100%;
+}
+
+.page-centered {
+  width: 300px;
+  height: 30%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.logo {
+	float: right;
+  margin-top: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #89BF4A;
+  margin-right: 40px;
+}
+
+.login-h1 {
+	color: #000;
+  font-weight: 800;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-h2 {
+	color: #333;
+  font-weight: 600;
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-input {
+	width:86%;
+	color: #6b6b6b;
+	margin-bottom: 10px;
+  font-size: 0.85em;
+  font-weight: 100;
+  border-radius: 50px !important;
+	border: 1px solid #615F5F;
+  padding: 10px 20px;
+}
+
+.form-submit {
+  display: block;
+  margin: 0 auto;
+	width: 80%;
+  background-color: #215A27;
+  border: none;
+  font-weight: 100;
+  font-size: 1em;
+  color: #FBFBFB;
+  padding: 10px 30px;
+	border-radius: 50px !important;
+  cursor: pointer;
+	margin-top: 10px;
+	filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.15));
+}
+
+.form-register {
+  display: block;
+  margin: 0 auto;
+	width: 80%;
+  background-color: #535353;
+  border: none;
+  font-weight: 100;
+  font-size: 1em;
+  color: #FBFBFB;
+  padding: 10px 30px;
+	border-radius: 50px !important;
+  cursor: pointer;
+	margin-top: 10px;
+	filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.15));
+}
+
+.divider{
+  border-top: 3px solid #C4C4C4;
+  height: 1px;
+  width: 500px;
+  color: #000;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  margin-left: -100%;
+  font-weight: 900;
+}
+
+h3 {
+  width: 200%; 
+  text-align: center; 
+  border-bottom: 4px solid #C4C4C4; 
+  line-height: 0.1em;
+  margin: 30px -50% 30px; 
+}
+
+h3 span { 
+  background: #ededed;; 
+  padding:0 10px; 
+}
+
+.textLabel {
+	font-weight: 100;
+  text-align: left;
+  margin-bottom: 2px;
+	margin-top: 12px;
+	margin-left: 8px;
+}
